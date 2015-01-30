@@ -79,10 +79,11 @@ int main(int argc, char** argv) {
 
     // Linear time using function
     getTotal(3, 5, 10);
+    getTotal(8, 9, 1000);
     
     // Constant time using function
     getSum(3, 5, 10);
-    getSum(8, 9, 10);
+    getSum(8, 9, 100);
     return 0;
 }
 
