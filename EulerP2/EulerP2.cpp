@@ -14,10 +14,22 @@
  */
 
 #include <cstdlib>
+#include <iostream>
 
 using namespace std;
 
 int main(int argc, char** argv) {
+    int n1 = 1;
+    int n2 = 2;
+    int n3 = 0;
+
+    cout << n1 << endl;
+    cout << n2 << endl;
+    while (n3 < 4000000) {
+        int n3 = n1 + n2;
+        n1 = n2;
+        n2 = n3;
+    }
 
     return 0;
 }
