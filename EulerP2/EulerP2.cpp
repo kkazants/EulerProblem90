@@ -22,15 +22,20 @@ int main(int argc, char** argv) {
     long n1 = 1;
     long n2 = 2;
     long n3 = 0;
+    long sum = 2;
 
     cout << n1 << endl;
     cout << n2 << endl;
-    while ((n2+n1) < 4400000) {
+    while ((n2+n1) < 4000000) {
         long n3 = n1 + n2;
-        cout<<n3<<endl;
+        if (n3%2 == 0){
+            sum += n3;
+        }
+        cout << n3 << endl;
         n1 = n2;
         n2 = n3;  
     }
+    cout << "The sum of even valued terms is: " << sum << endl;
 
     return 0;
 }
