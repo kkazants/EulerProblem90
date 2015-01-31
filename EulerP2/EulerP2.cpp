@@ -18,6 +18,22 @@
 
 using namespace std;
 
+void getSum(){
+    long numb1 = 0;
+    long numb2 = 1;
+    long sum = 0;
+    while ((numb1+numb2) < 4000000){
+        long value = numb1 + numb2;
+        cout << value << endl;
+        if (value%2 == 0){
+            sum += value;
+        }
+        numb2 = numb1;
+        numb1 = value;
+    }
+    cout << "Sum of even even values is: " << sum << endl;
+}
+
 int main(int argc, char** argv) {
     long n1 = 1;
     long n2 = 2;
@@ -36,6 +52,11 @@ int main(int argc, char** argv) {
         n2 = n3;  
     }
     cout << "The sum of even valued terms is: " << sum << endl;
+    
+    /*
+     * Now using a function
+     */
+    getSum();
 
     return 0;
 }
